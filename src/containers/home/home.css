@@ -1,0 +1,381 @@
+.banner img {
+    width: 100%;
+}
+
+
+
+.YW-Home-Nav-list {
+    margin-top: 20px;
+    float: left;
+    width: 20%;
+    margin-left: 4%;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.YW-Home-Nav-list img {
+    width: 100%;
+
+}
+.YW-Home-Nav-title{
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 0;
+    color: #ffffff;
+    padding-left: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ourCompany-div-top .icon-gongsi{
+    font-size: 70px;
+    color: #F66262;
+}
+.ourCompany-div-top .icon-shishishujuzhanshi{
+    font-size: 70px;
+    color: #4F4FAF;
+}
+
+
+.Cooperative-partner{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.Cooperative-partner-title{
+    height: 80px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color:#13CE66;
+}
+.Cooperative-partner-content{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.Cooperative-partner-img{
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 10px;
+    text-align: center;
+}
+.Cooperative-partner-img-title{
+    font-size: 18px;
+    color: #323f58;
+}
+
+.index-ourCompany{
+    background-color: #f0f0f0;
+}
+
+.index-ourCompany-top{
+    height: 190px;
+    text-align: center;
+
+}
+.index-ourCompany h2{
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgba(0,0,0,0.8);
+}
+
+.index-ourCompany h3{
+    font-size: 14px;
+    color: rgba(0,0,0,0.4);
+    padding-bottom: 30px;
+
+}
+.ourCompany-div{
+    width: 45%;
+    margin-left: 3.5%;
+    height: 560px;
+    background-color: #ffffff;
+    float: left;
+    overflow: hidden;
+}
+
+.ourCompany-div-top{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ourCompany-div-center{
+    text-align: center;
+}
+.Cooperative-partner-img img{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+.ourCompany-div-center h3{
+    font-size: 24px;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 5px;
+}
+
+.ourCompany-div-center h4{
+    font-size: 14px;
+    color: rgba(0,0,0,0.4);
+    margin-bottom: 5px;
+}
+
+.ourCompany-div-bottom {
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.ourCompany-div-bottom p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.index-myBusiness{
+    background-color: #f0f0f0;
+}
+
+
+.index-myBusiness-top{
+    height: 190px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+.index-myBusiness .icon-jiankongshuju{
+    font-size: 70px;
+    color: #13CE66;
+}
+
+.index-myBusiness .icon-shujucaiji{
+    font-size: 70px;
+    color: darkturquoise;
+}
+.index-myBusiness .icon-yidongyunkongzhitaiicon41{
+    font-size: 70px;
+    color: coral;
+}
+
+
+
+
+
+.index-myBusiness-top h2{
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgba(0,0,0,0.8);
+}
+
+.index-myBusiness-top h3{
+    font-size: 14px;
+    color: rgba(0,0,0,0.4);
+    padding-bottom: 30px;
+
+}
+
+.myBusiness-div{
+    width: 30%;
+    margin-left: 3%;
+    height: 560px;
+    background-color: #ffffff;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.myBusiness-div-top{
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+
+.myBusiness-div-center{
+    text-align: center;
+}
+.Cooperative-partner-img img{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+.myBusiness-div-center h3{
+    font-size: 24px;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 5px;
+}
+
+.myBusiness-div-center h4{
+    font-size: 14px;
+    color: rgba(0,0,0,0.4);
+    margin-bottom: 5px;
+}
+
+.myBusiness-div-bottom {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.YouChangeMe{
+    background-color: #f0f0f0;
+}
+
+.YouChangeMe-top{
+    height: 190px;
+    text-align: center;
+}
+.YouChangeMe-top h2{
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgba(0,0,0,0.8);
+}
+
+.YouChangeMe-top h3{
+    font-size: 14px;
+    color: rgba(0,0,0,0.4);
+    padding-bottom: 30px;
+
+}
+
+
+.changeMe{
+    width: 95%;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+.changeMe-div{
+    width: 25%;
+    float: left;
+    text-align: center;
+    background-color: #ffffff;
+}
+.changeMe-div-title{
+    height: 100px;
+    line-height: 100px;
+    font-weight: bold;
+    width: 95%;
+    margin: 0 auto;
+}
+.changeMe-div-img{
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.changeMe-div-img img{
+  width: 100%;
+}
+
+.index-team{
+    text-align: center;
+    background-color: #f0f0f0;
+}
+.index-team h2{
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgba(0,0,0,0.8);
+}
+
+.index-team h3{
+    font-size: 14px;
+    color: rgba(0,0,0,0.4);
+    padding-bottom: 30px;
+
+}
+.index-team-bottom{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+
+}
+.index-team-bottom-div{
+    width: 30%;
+    height: 30%;
+    position:absolute;
+    left: 35%;
+    top: 10%;
+    display: flex;
+    align-items: center;
+   justify-items: center;
+}
+.index-team-bottom-div h3{
+    font-size: 16px;
+}
+.index-team-bottom img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+    .ourCompany-div{
+        width: 90%;
+        height: 650px;
+        margin-bottom: 10px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 610px) {
+
+    .myBusiness-div{
+        width: 95%;
+        margin-bottom: 10px;
+        height: 450px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 540px) {
+
+    .Cooperative-partner-img{
+        width: 45%;
+
+    }
+    .YW-Home-Nav-list {
+        width: 44%;
+    }
+    .changeMe-div{
+        width: 50%;
+
+    }
+    .index-team-bottom-div{
+        width: 100%;
+        left: 0;
+    }
+
+
+}

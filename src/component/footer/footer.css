@@ -1,0 +1,181 @@
+.YW-Home-footer {
+    background-color: #f7f7f6;
+
+}
+
+.contact-us {
+
+}
+
+.contact-us-top {
+    height: 150px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.contact-us-top h3 {
+    font-size: 28px;
+    color: #5e5d5b;
+    margin-bottom: 10px;
+}
+
+.contact-us-top-e {
+    font-size: 20px;
+    color: #858483;
+    margin-bottom: 10px;
+}
+
+.contact-us-top-div {
+    width: 200px;
+    height: 20px;
+    margin: 10px auto;
+}
+
+.contact-us-top-div-left {
+    width: 40%;
+    height: 5px;
+    background-color: #5e5d5b;
+    float: left;
+    margin-top: 5px;
+    margin-right: 7%;
+}
+
+.contact-us-top-div-center {
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #AC1E14;
+    margin-top: 1px;
+}
+
+.contact-us-top-div-right {
+    width: 40%;
+    margin-left: 7%;
+    height: 5px;
+    background-color: #5e5d5b;
+    float: left;
+    margin-top: 5px;
+}
+
+.contact-us-center {
+
+
+}
+.contact-us-img img{
+    width: 100%;
+}
+.contact-us-center-div {
+    width: 45%;
+    margin-left: 3.5%;
+    background-color: #ffffff;
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact-us-center-div-div {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.contact-us-center-div-div-f {
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
+    color: #AC1E14;
+}
+
+.contact-us-center-div-div-s {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+
+
+
+.YW-Home-footer-bottom {
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.contact-us-center-div .icon-dianhua{
+    color: #AC1E14;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact-us-center-div .icon-dizhi{
+    color: #4F4FAF;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact-us-center-div .icon-youxiang{
+
+    color: #F66262;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+.contact-us-center-div .icon-msnui-weixin{
+    font-size: 20px;
+    color: #13CE66;
+    margin-right: 10px;
+}
+.contact-us-center-div-e{
+    width: 100px;
+    height: 100px;
+    background-color: #20A0FF;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.YW-Home-footer-bottom .icon-banquan {
+    color: #F66262;
+    font-size: 30px;
+
+}
+
+
+
+.YW-Home-footer-bottom p {
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+.YW-Home-footer-bottom p img {
+    margin-right: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .contact-us-center-div {
+        width: 95%;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
