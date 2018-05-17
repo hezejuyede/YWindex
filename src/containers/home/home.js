@@ -3,6 +3,7 @@ import './home.css';
 import {Carousel} from 'element-react';
 import "../../common/icon/iconfont.css"
 import 'element-theme-default';
+import axios from 'axios'
 
 
 import Header from '../../component/header/header'
@@ -17,130 +18,14 @@ class home extends Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            banner: [
-                {img: require('../../common/img/img01.jpg')},
-                {img: require('../../common/img/img02.jpg')}
-            ],
-            navbar:[
-                {
-                    img:require('../../common/img/01.jpg'),
-                    text:"公司介绍",
-                    url:""
-                },
-                {
-                    img:require('../../common/img/02.jpg'),
-                    text:"知识产权",
-                    url:""
-                },
-                {
-                    img:require('../../common/img/03.jpg'),
-                    text:"成功案例",
-                    url:""
-                },
-                {
-                    img:require('../../common/img/04.jpg'),
-                    text:"业务范畴",
-                    url:""
-                }
-            ],
-            myBusiness:[
-                {
-                    icon:"iconfont icon-jiankongshuju",
-                    title:"就地监控",
-                    text:"IN-SITU MONITORING",
-                    content:"本部分以电厂的输煤、化水、除灰等辅助控制为依托,逐步扩展到化工、水泥等行业的PLC应用，属于就地SCADA监控系统。"
-                },
-                {
-                    icon:"iconfont icon-shujucaiji",
-                    title:"数据采集",
-                    text:"DATA ACQUISITION",
-                    content:"主要是将企业内的生产环节全部数字化、信息化，并辅助以基础的报表、展示、统计、查询分析等功能；"
-                },
-                {
-                    icon:"iconfont icon-yidongyunkongzhitaiicon41",
-                    title:"数据挖掘",
-                    text:"DATA EXCAVATE",
-                    content:"主要是以电科院汽机、锅炉专业调试、试验、测点设计、数据采集、分析、模化、管理、调控为专业基础，立足于电厂热能动力、电力、热力生产过程的数据采集、处理、分析、挖掘、诊断、建模与调控的专业技术优势，通过专业化模型、同步化管理、精细化调控、实效化过程，服务于电力生产过程"
-                },
-            ],
-            Hardware:[
-                {img:require('../../common/img/emc.jpeg')},
-                {img:require('../../common/img/H3C.jpeg')},
-                {img:require('../../common/img/HP.jpeg')},
-                {img:require('../../common/img/dell.jpeg')},
-                {img:require('../../common/img/HW.jpeg')},
-                {img:require('../../common/img/IBM.jpeg')},
-                {img:require('../../common/img/lm.jpeg')},
-                {img:require('../../common/img/QMXC.jpeg')}
-            ],
-            knowledge: [
-                {
-                    text: '英伟报表管理系统',
-                    img: require('../../common/img/zscq/报表管理系统.jpeg')
-                },
-                {
-                    text: '英伟WEB发布系统',
-                    img: require('../../common/img/zscq/英伟WEB发布系统.png')
-                },
-                {
-                    text: '英伟大屏数据传输软件',
-                    img: require('../../common/img/zscq/英伟大屏数据传输软件.png')
-                },
-                {
-                    text: '英伟绩效考核系统软件',
-                    img: require('../../common/img/zscq/英伟绩效考核系统软件.png')
-                },
-                {
-                    text: '英伟电量采集接口软件',
-                    img: require('../../common/img/zscq/英伟电量采集接口软件.png')
-                },
-                {
-                    text: '英伟串口数据传输软件',
-                    img: require('../../common/img/zscq/串口数据传输软件.jpeg')
-                },
-                {
-                    text: '英伟数据安全传输软件',
-                    img: require('../../common/img/zscq/数据安全传输软件.jpg')
-                },
-                {
-                    text: '英伟数据采集接口软件',
-                    img: require('../../common/img/zscq/英伟数据采集接口软件.png')
-                }
-            ],
-            changeMe: [
-                {
-                    text: '华电宁夏灵武发电有限公司',
-                    img: require('../../common/img/CGAL/华电宁夏灵武发电有限公司.jpg')
-                },
-                {
-                    text: '华电淄博热电有限公司',
-                    img: require('../../common/img/CGAL/华电淄博热电有限公司.jpg')
-                },
-                {
-                    text: '华电潍坊发电有限公司',
-                    img: require('../../common/img/CGAL/华电潍坊发电有限公司.jpg')
-                },
-                {
-                    text: '四川广安发电有限责任公司',
-                    img: require('../../common/img/CGAL/四川广安发电有限责任公司.jpg')
-                },
-                {
-                    text: '国投云顶湄洲湾电力公司',
-                    img: require('../../common/img/CGAL/国投云顶湄洲湾电力有限公司.jpg')
-                },
-                {
-                    text: '安徽华电宿州发电有限公司',
-                    img: require('../../common/img/CGAL/安徽华电宿州发电有限公司.jpg')
-                },
-                {
-                    text: '漳州后石电厂',
-                    img: require('../../common/img/CGAL/漳州后石电厂.jpg')
-                },
-                {
-                    text: '珠海醋酸纤维有限公司',
-                    img: require('../../common/img/CGAL/珠海醋酸纤维有限公司.jpg')
-                }
-            ],
+            banner: [],
+            navbar:[],
+            OurCompanyL:[],
+            OurCompanyR:[],
+            myBusiness:[],
+            Hardware:[],
+            knowledge: [],
+            changeMe: [],
             imgHeight:''
         }
     }
@@ -171,7 +56,6 @@ class home extends Component {
                             <img src={item.img} alt=""/>
                             <p className="YW-Home-Nav-title">{item.text}</p>
                         </div>
-
                     })}
                 </section>
                 <section className="index-ourCompany">
@@ -189,32 +73,36 @@ class home extends Component {
                                     <h3 className="">企业信用信息</h3>
                                     <h4 className="">ENTERPRISE CREDIT INFORMATION</h4>
                                 </div>
-                                <div className="ourCompany-div-bottom">
-                                    <p className="">
-                                        统一社会信用代码： 913701125681316013
-                                    </p>
-                                    <p className="">
-                                        企业名称： 山东英伟电子技术有限公司
-                                    </p>
-                                    <p className="">
-                                        类型： 有限责任公司(自然人投资或控股)
-                                    </p>
-                                    <p className="">
-                                        法定代表人： 李营
-                                    </p>
-                                    <p className="">
-                                        注册资本： 800.000000万
-                                    </p>
-                                    <p className="">
-                                        成立日期： 2011年04月01日
-                                    </p>
-                                    <p className="">
-                                        登记机关： 济南市历城区市场监督管理局
-                                    </p>
-                                    <p className="">
-                                        经营范围： 计算机软硬件的开发、技术服务、技术转让、技术咨询及销售；计算机系统集成；计算机信息技术服务；仪器仪表、电子产品、计算机及外围设备、办公设备、电子元器件、非专控通讯设备的批发、零售。
-                                    </p>
-                                </div>
+                                {this.state.OurCompanyL.map((item,index)=>{
+                                    return    <div key={index} className="ourCompany-div-bottom">
+                                        <p className="">
+                                            {item.xy}
+                                        </p>
+                                        <p className="">
+                                            {item.name}
+                                        </p>
+                                        <p className="">
+                                            {item.type}
+                                        </p>
+                                        <p className="">
+                                            {item.username}
+                                        </p>
+
+                                        <p className="">
+                                            {item.time}
+                                        </p>
+                                        <p className="">
+                                            {item.dj}
+                                        </p>
+                                        <p className="">
+                                            {item.jg}
+                                        </p>
+                                        <p className="">
+                                            {item.fw}
+                                        </p>
+                                    </div>
+                                })}
+
                             </div>
                             <div  className="ourCompany-div">
                                 <div className="ourCompany-div-top">
@@ -225,9 +113,12 @@ class home extends Component {
                                     <h4 className="">ENTERPRISE OVERVIEW</h4>
                                 </div>
                                 <div className="ourCompany-div-bottom">
-                                    <p>
-公司依托山东省电科院的技术积累，主要面向电力行业用户，业务范围涵盖电力就地监控（自动化）、信息化，在山东、内蒙、安徽、福建、云南、四川等地具有广泛的客户基础。同时，公司与积成电子股份有限公司、浙江中控软件、太极集团等建立了战略合作关系，具有良好的业内口碑。公司在大数据库深入应用领域处于行业领先地位，同时具备极强的技术攻关能力及新产品、新技术的研发能力。“用心服务、质量为本”是公司的经营理念，公司成立7年来（2011年成立，自2013年正式运营），一直以优质的服务受到了客户的广泛认可。
-                                    </p>
+                                    {this.state.OurCompanyR.map((item,index)=>{
+                                        return  <p key={index}>
+                                            {item.text}
+                                        </p>
+                                    })}
+
                                 </div>
                             </div>
                         </div>
@@ -326,21 +217,28 @@ class home extends Component {
 
     // 页面渲染前需要执行的方法
     componentWillMount() {
-        this.getWindowHeight()
+
+        this.getWindowHeight();
+
     };
 
     //页面即将渲染需要执行的方法
     componentDidMount() {
+        this._getBanner();
+        this._indexNav();
+        this._OurCompanyL();
+        this._OurCompanyR();
+        this._myBusiness();
+        this._OurHardwarePartners();
+        this._TheyChoseUs();
+        this._OurSoftware();
+
 
 
 
     }
 
-    //在组件析构阶段，即解除一些方法的绑定绑定
-    componentWillUnmount() {
-
-    }
-
+    //根据屏高度轮播图高度自适应
     getWindowHeight() {
         window.onresize = () => {
             let w = document.documentElement.clientWidth;
@@ -351,6 +249,122 @@ class home extends Component {
 
 
     }
+
+    //获取轮播图信息
+    _getBanner(){
+        axios.get("/indexBaner")
+            .then((res)=>{
+            this.setState({
+                banner:res.data
+            })
+        })
+            .catch((err)=>{
+                console.log(err)
+            })
+
+
+    }
+
+    //获取首页导航信息
+    _indexNav(){
+        axios.get("/indexNav")
+            .then((res)=>{
+                this.setState({
+                    navbar:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+     // 我的公司左侧信息
+    _OurCompanyL(){
+        axios.get("/OurCompanyL")
+            .then((res)=>{
+                this.setState({
+                    OurCompanyL:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+    //我的公司右侧信息
+    _OurCompanyR(){
+        axios.get("/OurCompanyR")
+            .then((res)=>{
+                this.setState({
+                    OurCompanyR:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+     //我们的业务
+    _myBusiness(){
+        axios.get("/OurBusiness")
+            .then((res)=>{
+                this.setState({
+                    myBusiness:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+    //我们的硬件合作商
+    _OurHardwarePartners(){
+        axios.get("/OurHardwarePartners")
+            .then((res)=>{
+                this.setState({
+                    Hardware:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+    //他们选择了我们
+    _TheyChoseUs(){
+        axios.get("/TheyChoseUs")
+            .then((res)=>{
+                this.setState({
+                    changeMe:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+    //行内领先软件
+    _OurSoftware(){
+        axios.get("/OurSoftware")
+            .then((res)=>{
+                this.setState({
+                    knowledge:res.data
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
+
+
+
+
+    //在组件析构阶段，即解除一些方法的绑定绑定
+    componentWillUnmount() {
+
+    }
+
+
 
 
 }

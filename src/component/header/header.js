@@ -3,7 +3,8 @@ import './header.css'
 import Logo from '../../common/img/LOGO.png'
 import {Button, Input, Menu} from 'element-react';
 import 'element-theme-default';
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import axios from 'axios'
 
 
 
@@ -14,148 +15,7 @@ class header extends Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
             navLeft:true,
-            navBar:[
-                {
-                    index:"2",
-                    title:"关于我们",
-                    child:[
-                        {
-                            index:"2-1",
-                            title:"公司简介"
-                        },
-                        {
-                            index:"2-2",
-                            title:"关于我们"
-                        },
-                        {
-                            index:"2-3",
-                            title:"公司新闻"
-                        },
-                        {
-                            index:"2-4",
-                            title:"企业文化"
-                        },
-                        {
-                            index:"2-5",
-                            title:"合作伙伴"
-                        },
-                        {
-                            index:"2-6",
-                            title:"联系我们"
-                        }
-                    ]
-                },
-                {
-                    index:"3",
-                    title:"知识产权",
-                    child:[
-                        {
-                            index:"3-1",
-                            title:"英伟报表管理系统"
-                        },
-                        {
-                            index:"3-2",
-                            title:"英伟WEB发布系统"
-                        },
-                        {
-                            index:"3-3",
-                            title:"英伟数据采集接口软件"
-                        },
-                        {
-                            index:"3-4",
-                            title:"英伟串口数据传输软件"
-                        },
-                        {
-
-                            index:"3-5",
-                            title:"英伟电量采集接口软件"
-                        },
-                        {
-                            index:"3-6",
-                            title:"英伟大屏数据传输软件"
-                        },
-                        {
-
-                            index:"3-7",
-                            title:"英伟电量采集接口软件"
-                        },
-                        {
-                            index:"3-8",
-                            title:"英伟绩效考核系统软件"
-                        }
-                    ]
-                },
-                {
-                    index:"4",
-                    title:"成功案例",
-                    child:[
-                        {
-                            index:"4-1",
-                            title:"华电宁夏灵武发电有限公司"
-                        },
-                        {
-                            index:"4-2",
-                            title:"华电宁夏灵武发电有限公司"
-                        },
-                        {
-                            index:"4-3",
-                            title:"华电潍坊发电有限公司"
-                        },
-                        {
-                            index:"4-4",
-                            title:"四川广安发电有限责任公司"
-                        },
-                        {
-                            index:"4-5",
-                            title:"国投云顶湄洲湾电力公司"
-                        },
-                        {
-                            index:"4-6",
-                            title:"安徽华电宿州发电有限公司"
-                        },
-                        {
-                            index:"4-7",
-                            title:"漳州后石电厂"
-                        },
-                        {
-                            index:"4-8",
-                            title:"珠海醋酸纤维有限公司"
-                        }
-                    ]
-                },
-                {
-                    index:"5",
-                    title:"业务范畴",
-                    child:[
-                        {
-                            index:"5-1",
-                            title:"就地监控"
-                        },
-                        {
-                            index:"5-2",
-                            title:"数据采集"
-                        },
-                        {
-                            index:"5-3",
-                            title:"数据挖掘"
-                        }
-                    ]
-                },
-                {
-                    index:"6",
-                    title:"加入我们",
-                    child:[
-                        {
-                            index:"6-1",
-                            title:"社会招聘"
-                        },
-                        {
-                            index:"6-2",
-                            title:"校园招聘"
-                        }
-                    ]
-                }
-            ]
+            navBar:[]
         }
     }
 
@@ -235,8 +95,21 @@ class header extends Component {
 
     //页面即将渲染需要执行的方法
     componentDidMount() {
+        this._getHeaderNav()
 
 
+    }
+
+    _getHeaderNav(){
+        axios.get("/YWHeader")
+            .then((res)=>{
+            this.setState({
+                navBar:res.data
+            })
+        })
+            .catch((err)=>{
+                console.log(err)
+            })
     }
 
     changeChinese() {
