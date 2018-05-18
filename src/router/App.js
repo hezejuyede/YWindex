@@ -18,7 +18,7 @@ class Routers extends Component {
                 <Switch>
                     <Route path="/Home" component={Home}>
                     </Route>
-                    <Route path="/pageContent" component={Page}>
+                    <Route path="/pageContent/:id" component={Page}>
                     </Route>
                     <Redirect from="/" to="/Home"></Redirect>
                 </Switch>

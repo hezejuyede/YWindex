@@ -113,12 +113,12 @@ class header extends Component {
     }
 
     changeChinese() {
-        alert("hhh")
+        this.props.history.push('/');
 
     }
 
     changeEnglish() {
-        alert("e")
+        alert("英文网站开发中，敬请期待")
     }
 
     onSelect( index, indexPath) {
@@ -126,7 +126,8 @@ class header extends Component {
             this.props.history.push('/');
         }
         else {
-            this.props.history.push('/pageContent');
+            this.props.history.push('/pageContent/'+ index);
+            this.props.history.go(0);
         }
     }
     showHideNav(){

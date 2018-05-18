@@ -32,14 +32,14 @@ class footer extends Component {
                                 <p className="contact-us-center-div-div-f">电话</p>
                                 <p className="contact-us-center-div-div-s">
                                     <i className="iconfont icon-dianhua"></i>
-                                    <span>0531-12345678</span>
+                                    <span>13964004210</span>
                                 </p>
                             </div>
                             <div className="contact-us-center-div-div">
                                 <p className="contact-us-center-div-div-f">EMAIL</p>
                                 <p className="contact-us-center-div-div-s">
                                     <i className="iconfont icon-youxiang"></i>
-                                    <span> yingwei@163.com</span>
+                                    <span> 386628255@qq.com</span>
                                 </p>
                             </div>
                         </div>
